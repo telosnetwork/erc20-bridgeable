@@ -14,7 +14,7 @@ contract ERC20Bridgeable is ERC20, ERC20Burnable {
     modifier onlyBridge() {
         require(
             bridge == msg.sender,
-            "BridgeableERC20: only the bridge can trigger this method !"
+            "ERC20Bridgeable: only the bridge can trigger this method !"
         );
         _;
     }
