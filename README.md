@@ -14,6 +14,8 @@ ERC20 Template for a bridgeable ERC20 token, to be compatible with the Telos Tok
 
 `npx hardhat deploy --network testnet`
 
+_Save the deployment address for bridge registration_
+
 ## Verify
 
 `npx hardhat sourcify --network testnet`
