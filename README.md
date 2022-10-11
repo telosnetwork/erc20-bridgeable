@@ -26,5 +26,5 @@ _Request can timeout but will still go through_
 
 You can register your token, as part of an EVM / Antelope pair by following documentation on our [TokenBridge](https://github.com/telosnetwork/telos-token-bridge) repository
 
-_Your contract needs to be verified_
+_You need to have access to the  address of the token's owner and the contract needs to be verified_
 
