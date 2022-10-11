@@ -34,7 +34,7 @@ describe("RNGOracleBridge Contract", function () {
             expect(await erc20bridgeable.balanceOf(user.address)).to.equal(HUNDRED_TLOS);
         });
         it("Should not allow random addresses to mint tokens" , async function () {
-            await expect(erc20bridgeable.connect(user).mint(user.address, HUNDRED_TLOS)).to.be.revertedWith("BridgeableERC20: only the bridge can trigger this method !");
+            await expect(erc20bridgeable.connect(user).mint(user.address, HUNDRED_TLOS)).to.be.revertedWith("ERC20Bridgeable: only the bridge can trigger this method !");
         });
     });
     describe(":: Burn", async function () {
@@ -46,7 +46,7 @@ describe("RNGOracleBridge Contract", function () {
         });
         it("Should not allow random addresses to burn tokens" , async function () {
             await expect(erc20bridgeable.mint(user.address, HUNDRED_TLOS)).to.not.be.reverted;
-            await expect(erc20bridgeable.connect(user).burnFrom(user.address, HUNDRED_TLOS)).to.be.revertedWith("BridgeableERC20: only the bridge can trigger this method !");
+            await expect(erc20bridgeable.connect(user).burnFrom(user.address, HUNDRED_TLOS)).to.be.revertedWith("ERC20Bridgeable: only the bridge can trigger this method !");
         });
 
     });
