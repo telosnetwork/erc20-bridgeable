@@ -14,6 +14,12 @@ ERC20 Template for a bridgeable ERC20 token, to be compatible with the Telos Tok
 
 `npx hardhat deploy --network testnet`
 
+## Verify
+
+`npx hardhat sourcify --network testnet`
+
+_Request can timeout but will still go through_
+
 ## Registration on our bridge
 
 You can register your token, as part of an EVM / Antelope pair by following documentation on our [TokenBridge](https://github.com/telosnetwork/telos-token-bridge) repository
