@@ -18,12 +18,12 @@ contract ERC20Bridgeable is ERC20, ERC165Storage, ERC20Burnable, Ownable {
     modifier onlyBridge() {
         require(
             bridge == msg.sender,
-            "BridgeableERC20: only the bridge can trigger this method !"
+            "ERC20Bridgeable: only the bridge can trigger this method !"
         );
         _;
     }
 
-    // @dev called from the bridge when tokens are locked on Antelope side
+    // @dev called from the Antelope bridge when tokens are locked on Antelope side
     function mint(address _recipient, uint256 _amount)
         public
         virtual
@@ -32,7 +32,7 @@ contract ERC20Bridgeable is ERC20, ERC165Storage, ERC20Burnable, Ownable {
         _mint(_recipient, _amount);
     }
 
-    // @dev called from the bridge when tokens are received on EVM side
+    // @dev called by the EVM bridge before adding a new request
     function burnFrom(address _account, uint256 _amount)
         public
         virtual

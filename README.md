@@ -1,13 +1,30 @@
-# Sample Hardhat Project
+# ERC20 Bridgeable
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+ERC20 Template for a bridgeable ERC20 token, to be compatible with the Telos Token Bridge your ERC20 needs to implement our `mint()` and `burnFrom()` method. 
 
-Try running some of the following tasks:
+## Install
 
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.js
-```
+`npm install`
+
+## Test
+
+`npx hardhat test`
+
+## Deploy
+
+`npx hardhat deploy --network testnet`
+
+_Save the deployment address for bridge registration_
+
+## Verify
+
+`npx hardhat sourcify --network testnet`
+
+_Request can timeout but will still go through_
+
+## Registration on our bridge
+
+You can register your token, as part of an EVM / Antelope pair by following documentation on our [TokenBridge](https://github.com/telosnetwork/telos-token-bridge) repository
+
+_You need to have access to the  address of the token's owner to request registration and the token's contract needs to be verified for the registration to be approved_
+
