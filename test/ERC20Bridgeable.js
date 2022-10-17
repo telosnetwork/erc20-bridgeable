@@ -7,7 +7,7 @@ const TOKEN_NAME = "My Bridgeable Token";
 const TOKEN_SYMBOL = "MBT";
 
 
-describe("RNGOracleBridge Contract", function () {
+describe("ERC20Bridgeable Contract", function () {
     let antelope_bridge, user, erc20bridgeable;
     beforeEach(async () => {
         [antelope_bridge, user] = await ethers.getSigners();
